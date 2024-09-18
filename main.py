@@ -17,10 +17,10 @@ def save_code_to_file(input_string):
         code = match.group(1)
 
         try:
-            # Write the code to 'result.py'
-            with open('result.py', 'w') as file:
+            # Write the code to 'old-example-result.py'
+            with open('old-example-result.py', 'w') as file:
                 file.write(code)
-            print("Code successfully saved to 'result.py'")
+            print("Code successfully saved to 'old-example-result.py'")
         except IOError as e:
             print(f"An error occurred while saving the file: {e}")
     else:
@@ -32,6 +32,6 @@ def hello(name: str):
     """You are a helpful assistant.""" # System prompt
     return f"generate that code for a game called {name}!" # User prompt
 
-greeting = hello("snake")
+code = hello("snake")
 
-save_code_to_file(greeting)
+save_code_to_file(code)
