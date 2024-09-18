@@ -20,7 +20,7 @@ def save_code_to_file(input_string):
             # Write the code to 'old-example-result.py'
             with open('result.py', 'w') as file:
                 file.write(code)
-            print("Code successfully saved to 'old-example-result.py'")
+            print("Code successfully saved to 'result.py'")
         except IOError as e:
             print(f"An error occurred while saving the file: {e}")
     else:
