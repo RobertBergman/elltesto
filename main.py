@@ -18,7 +18,7 @@ def save_code_to_file(input_string):
 
         try:
             # Write the code to 'old-example-result.py'
-            with open('old-example-result.py', 'w') as file:
+            with open('result.py', 'w') as file:
                 file.write(code)
             print("Code successfully saved to 'old-example-result.py'")
         except IOError as e:
@@ -32,6 +32,6 @@ def hello(name: str):
     """You are a helpful assistant.""" # System prompt
     return f"generate that code for a game called {name}!" # User prompt
 
-code = hello("snake")
+code_string = hello("snake")
 
-save_code_to_file(code)
+save_code_to_file(code_string)
